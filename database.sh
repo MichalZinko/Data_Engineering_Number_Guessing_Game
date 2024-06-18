@@ -16,4 +16,5 @@ fi
 
 CREATING_DATABASE=$($PSQL -t --no-align -c "CREATE DATABASE games")
 CREATING_PLAYER_TABLE=$($PSQL_GAME "CREATE TABLE players(player_id SERIAL PRIMARY KEY, name VARCHAR(22))")
-CREATING_GAMES_TABLE=$($PSQL_GAME "CREATE TABLE games(game_id SERIAL PRIMARY KEY, player_id INT, number_of_guesses INT)")
+CREATING_GAMES_TABLE=$($PSQL_GAME "CREATE TABLE games_info(game_id SERIAL PRIMARY KEY, player_id INT, number_of_guesses INT, FOREIGN KEY (player_id) REFERENCES players(player_id))")
+
