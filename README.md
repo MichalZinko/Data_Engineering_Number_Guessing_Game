@@ -1,4 +1,2 @@
-This script generates a random number between 1 and 1000 for users to guess. 
-Number_guess database to holds the information suggested in the user stories. 
-This script only ask for input from the user to get the username and to take guesses. 
-The tests adds users to database when the script has that ability.
+The purpose of this project was to write program that would generate random number that user would have to guess. 
+Program was written in bash and connects to PostgreSQL database. 
